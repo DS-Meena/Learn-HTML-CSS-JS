@@ -1,5 +1,6 @@
-# mini_web
-some mini web pages and web app
+# Library
+This is an author’s or book seller’s portfolio.
+![mini-web-1280x654](https://github.com/user-attachments/assets/6e7447f8-5c7d-43d5-941f-8fc03ea38032)
 
 this is a homepage for a website of online books.
 
