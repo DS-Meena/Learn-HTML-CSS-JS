@@ -69,11 +69,11 @@
 /* for the educational books section */
 
 .education-books {
-    background-image: url("education layer.png");
+    background-image: url("images/education layer.png");
 }
 
 .education-books {
-    background-image: url("education layer.png");
+    background-image: url("images/education layer.png");
     color: #2f3640;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
@@ -146,11 +146,11 @@
 
 form {
     border: 4mm ridge rgba(59, 37, 68, 0.6);
-    background-image: url("newsletter.jpg");
+    background-image: url("images/newsletter.jpg");
 }
 
 form p {
-    background-image: url("newsletter.jpg");
+    background-image: url("images/newsletter.jpg");
 }
 
 .container {
