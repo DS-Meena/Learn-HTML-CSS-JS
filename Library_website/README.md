@@ -6,4 +6,4 @@ This is an author’s or book seller’s portfolio. This can be a homepage for a
 
 Nothing much, just practicing my html, css and javascriptl
 
-You can access the website at following [link](https://ds-meena.github.io/Library_website/readthis.html).
+You can access the website at following [link](https://ds-meena.github.io/Learn-HTML-CSS-JS/Library_website/readthis.html).
