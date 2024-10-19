@@ -5,9 +5,9 @@ Enter the numbers which you know and left the remaining blank.
 
 In a matter of seconds, it will give you one of the correct answer.
 
-You can access the online sudoku solver at following [link](https://ds-meena.github.io/Library_website/Sudoku_solver/app.html).
+You can access the online sudoku solver at following [link](https://ds-meena.github.io/Learn-HTML-CSS-JS/Sudoku_solver/app.html).
 
-## How it works
+## How it works 👷🏽‍♀️
 
 1. Enter the known numbers.
 2. Click solve.
