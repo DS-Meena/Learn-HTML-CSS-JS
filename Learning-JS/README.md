@@ -1,5 +1,8 @@
 # Java script
 
+Let's start learning JS by creating some projects. I am thinking to start with Rock,Paper, Scissor game then Tic Tac toe or Word scramble game.
+
+
 ### Toggle Heading
 
 Below program toggles the heading text from "Learning Angular" to "Learning JS" and vice versa.
