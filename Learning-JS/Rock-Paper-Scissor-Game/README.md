@@ -8,6 +8,8 @@ In this player can choose one of the 3 options and computer will choose randomly
 - Paper beats rock.
 - Rock beats scissor.
 
+Link to the Game: [Play](https://ds-meena.github.io/Learn-HTML-CSS-JS/Learning-JS/Rock-Paper-Scissor-Game)
+
 ## Features 🪶
 
 1. There are 3 buttons for 3 options.
