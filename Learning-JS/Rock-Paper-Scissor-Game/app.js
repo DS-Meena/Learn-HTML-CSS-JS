@@ -21,6 +21,9 @@ const game = () => {
                 // computer turn
                 const choiceNumber = Math.floor(Math.random() * 3);
                 const computerChoice = computerOptions[choiceNumber];
+                
+                // Update the symbols
+                updateSymbols(this.innerText, computerChoice)
 
                 // check winner if any
                 winner(this.innerText, computerChoice)
@@ -32,6 +35,36 @@ const game = () => {
 
             })
         })
+    }
+
+    // function to update symbols
+    const updateSymbols = (playerChoice, computerChoice) => {
+        const playerSymbol = document.querySelector('.p-action');
+        const computerSymbol = document.querySelector('.c-action');
+
+        playerChoice = playerChoice.toLowerCase();
+        
+        switch (playerChoice) {
+            case 'rock':
+                playerSymbol.textContent = '🪨';
+                break;
+            case 'paper':
+                playerSymbol.textContent = '📄';
+                break;
+            default:
+                playerSymbol.textContent = '✂️';
+        }
+
+        switch (computerChoice) {
+            case 'rock':
+                computerSymbol.textContent = '🪨';
+                break;
+            case 'paper':
+                computerSymbol.textContent = '📄';
+                break;
+            default:
+                computerSymbol.textContent = '✂️';
+        }
     }
 
     // function to decide winner

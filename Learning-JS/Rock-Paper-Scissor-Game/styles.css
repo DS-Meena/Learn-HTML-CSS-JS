@@ -26,10 +26,9 @@
 /* Score card */
 .score {
     display: flex;
-    width: 30vw;
+    width: 80vw;
     justify-content: space-evenly;
-    position: absolute;
-    top: 70px;
+    position: relative;
     z-index: 1;
 }
 
@@ -37,6 +36,16 @@
     text-align: center;
     font-size: 1.5rem;
     margin-top: 1rem;
+}
+
+/* Selected moves */
+.action {
+    display: flex;
+    width: 80vw;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 0;
+    font-size: 6rem;
 }
 
 /* displaying three buttons in one line */
