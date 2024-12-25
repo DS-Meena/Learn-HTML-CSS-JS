@@ -67,14 +67,12 @@ class TicTacToe {
         const cell = event.target;
         const cellIndex = parseInt(cell.getAttribute('data-cell-index'));
 
-        if (!this.isValidMove(cellIndex)) return;
+        // return if invalid move
+        if (this.board[cellIndex] != '' || !this.gameActive) 
+            return;
 
         this.makeMove(cell, cellIndex);
         this.checkGameStatus();
-    }
-
-    isValidMove(index) {
-        return this.board[index] === '' && this.gameActive;
     }
 
     makeMove(cell, index) {
@@ -152,11 +150,7 @@ class TicTacToe {
         });
 
         this.updateScoreDisplay();
-    }
-
-    updateScoreDisplay() {
-        const theme = this.themes[this.currentTheme];
-        this.scoreDisplay.textContent = `${theme.X}: ${this.playerScores.X} - ${theme.O}: ${this.playerScores.O}`;
+        this.updateStatusDisplay();
     }
 
     handleDraw() {
@@ -169,8 +163,13 @@ class TicTacToe {
         this.updateStatusDisplay();
     }
 
+    updateScoreDisplay() {
+        const theme = this.themes[this.currentTheme];
+        this.scoreDisplay.textContent = `${theme.X}: ${this.playerScores.X} - ${theme.O}: ${this.playerScores.O}`;
+    }
+
     updateStatusDisplay() {
-        this.statusDisplay.textContent = `Player ${this.currentPlayer}'s turn`;
+        this.statusDisplay.textContent = `Player ${this.themes[this.currentTheme][this.currentPlayer]}'s turn`;
     }
 
     // for reset game button
