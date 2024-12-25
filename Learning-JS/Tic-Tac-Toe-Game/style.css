@@ -21,6 +21,31 @@ body {
     background-color: #ffffff;
 }
 
+/* Header part of game */
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+#theme-selector {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.score-display {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 5px;
+}
+
+/* Board  */
 .game-container {
     text-align: center;
     margin: 0 auto;
@@ -37,17 +62,21 @@ body {
     width: 100px;
     height: 100px;
     border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     background: #f0f0f0;
     aspect-ratio: 1;
-    font-size: 2em;
+    font-size: 2.5em;
     transition: background-color 0.3s;
 }
 
 .cell:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s;
     background: #e0e0e0;
 }
 
@@ -59,9 +88,37 @@ body {
     color: #F44336;
 }
 
-.game-status {
-    font-size: 1.2em;
-    margin: 20px 0;
+/* Cell related styling and animations */
+.cell-animated {
+    animation: pop 0.3s ease-in-out;
+}
+
+@keyframes pop {
+    0% {transform: scale(0.8);}
+    50% {transform: scale(1.2);}
+    100% {transform: scale(1);}
+}
+
+/* For the winner cells */
+.winner {
+    background: #4CAF50;
+    color: white !important;
+    animation: winner-pulse 1s infinite;
+}
+
+@keyframes winner-pulse {
+    0% {opacity: 0.8;}
+    50% {opacity: 1;}
+    100% {opacity: 0.8;}
+}
+
+/* Reset buttons */
+
+.controls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .reset-button {
@@ -77,4 +134,53 @@ body {
 
 .reset-button:hover {
     background: #45a049;
+}
+
+.reset-score {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background: #FF5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.reset-score:hover {
+    background: #F4511E;
+}
+
+.score-reset-animation {
+    animation: scoreReset 0.5s ease;
+}
+
+@keyframes scoreReset {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+        background-color: #FF5722;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.game-status {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #222;
+    }
+    .cell {
+        background: #333;
+    }
+    .cell:hover {
+        background: #444;
+    }
 }
